@@ -1,0 +1,48 @@
+<div class="list-container">
+    <div class="section">
+        <div class="container">
+            <div class="row product-detail-container" style="margin: 14px">
+                    <div class="col-md-3 product-detail-img">
+                        <img class="product-detail img-responsive " src="{{currentProduct.imageUrls.lg}}">
+                    </div>
+                    <div class="col-md-6">
+                        <div style="margin-top: 20px;">
+                            <h5 class="product-detail-header"><span>{{currentProduct.brand}}</span> <span>{{currentProduct.description}}</span></h5>
+
+                            <ul class="product-detail-desc">
+                                <li ng-repeat="point in currentProduct.marketingBullets" style="padding-bottom: 10px;">{{point}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="product-detail-price">${{currentProduct.networkPrice}}</h3>
+                        <div class="product-detail-cart-container">
+                        <button class="btn btn-default product-detail-cartBtn" ng-click="addtocart()">ADD TO CART</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="margin-top: 15px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="col-md-3" ng-repeat="product in products">
+                    <div class="row product-box-container">
+                        <div class="col-md-12 col-sm-4 col-xs-4">
+                            <img src="{{product.imageUrls.md}}" class="img-responsive product-box-img">
+                        </div>
+                        <div class="col-md-12 col-sm-8 col-xs-8">
+                            <h5 class="product-box-title"><span>{{product.brand}}</span> 
+                                <span ng-if="product.description.length>40">{{product.description.substring(0, 40)}}...</span></h5>
+                                <span ng-if="!product.description.length>40">{{product.description}}</span></h5>
+                            <h5 class="product-box-price">${{product.networkPrice}}</h5>
+                            <div class="text-center"><button class="btn btn-default product-box-view " ng-click="viewBtn(product)">VIEW MORE</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

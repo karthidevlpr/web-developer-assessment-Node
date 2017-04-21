@@ -1,0 +1,10 @@
+{
+  "name": "web-developer-assessment-Node",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-bootstrap": "^2.5.0",
+    "angular-resource": "~1.4.8",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7"
+  }
+}
